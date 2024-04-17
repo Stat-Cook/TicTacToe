@@ -33,6 +33,8 @@ class Game:
         return self.players[self.player_index]
 
     def main(self):
+        self.board.reset_moves()
+
         while not self.board.check_for_victory():
             self.board.draw_board()
             try:
